@@ -1573,7 +1573,318 @@ footer {
 
 }
 
+@media screen and (max-width: 400px) {
 
+
+    /*---------------- ART 2 --------------*/
+
+    .article-phrase h2 {
+        width: 60vw;
+        font-size: 2rem;
+        text-align: center;
+        color: #FCF9F4;
+        font-family: 'Donegal One', serif;
+        position: absolute;
+    }
+
+
+    /*---------------- ART 3 ------------------*/
+    
+    .box-images {
+        height: auto;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: .5s .5s;
+        overflow: hidden;
+    }
+    
+    .box-images img {
+        min-width: 300px;
+        max-width: 120%;
+        height: auto;
+        object-fit: cover;
+        margin: auto;
+    }
+    
+    .trust-your-gut-text-container {
+        font-size: 1rem;
+        color: #3B3838;
+        padding: .5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 90vw;
+        z-index: 400;
+        opacity: 0;
+        transition: .5s .2s;
+    }
+    
+    .trust-your-gut-text-container h3 {
+        font-family: 'Donegal One', serif;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    
+    .flecha-derecha-container a {
+        font-size: .7rem;
+        text-decoration: none;
+        color: #3B3838;
+    
+    }
+
+
+    /* ------------------------- ARTICLE 4 ---------------------*/
+
+    .knock {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #475A51;
+    }
+
+    .chat {
+        width: 85vw;
+        height: 85vh;
+        position: relative;
+        font-size: 1.5rem;
+        font-family: 'Donegal One', serif;
+    }
+
+    .toc-toc {
+        position: absolute;
+        color: #FCF9F4;
+        opacity: 0;
+        transition: .5s .5s;
+    }
+
+    .quien {
+        position: absolute;
+        right: 0;
+        top: 18%;
+        color: #BC9E7B;
+        opacity: 0;
+        transition: .5s 1.5s;
+    }
+
+    .answer {
+        position: absolute;
+        top: 45%;
+        max-width: 100%;
+        color: #FCF9F4;
+        opacity: 0;
+        transition: .5s 2.5s;
+    }
+
+    /* ------------------------- ARTICLE 5 ----------------------*/
+
+    .article5 {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+
+    .welcome-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .welcome-image video {
+        width: 100%;
+        object-fit: cover;
+        height: 40vh;
+    }
+
+    .invite-ono {
+        width: 100%;
+        height: 60vh;
+        display: flex;
+        justify-content: center;
+    }
+
+    .invite-ono-items {
+        height: auto;
+        width: 90%;
+        max-width: 30rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        font-size: 1rem;
+        color: #3B3838;
+        transition: .5s;
+    }
+
+    .moverHaciaArriba {
+        animation: moverHaciaArriba .5s;
+        transition: .5s;
+    }
+
+    .invite-ono-items h3 {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        font-family: 'Donegal One', serif;
+    }
+
+    .invite-ono-items p {
+        font-weight: 300;
+    }
+
+
+    /* ------------------------------------ ARTICLE 6 ------------------------------*/
+
+    .article6 {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content:center;
+        gap: 1rem;
+    }
+
+    .zero-waste-container {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .zero-waste-items {
+        height: auto;
+        width: 90%;
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        font-size: 1rem;
+        color: #3B3838;
+        transition: .5s;
+    }
+
+    .zero-waste-items h3 {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        font-family: 'Donegal One', serif;
+        max-width: 40%;
+    }
+
+
+    .zero-waste-items p {
+        font-weight: 300;
+    }
+
+
+    .boxes-gif {
+        width: 100vw;
+        height: 30vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #FE6340;
+    }
+
+    .boxes-gif video {
+        width: 30vw;
+    }
+
+
+
+    /* --------------------------- ARTICLE 7------------------------------*/
+
+    .article7 {
+        width: 100%;
+        height: auto;
+        background-color: #BC9E7B;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem 0;
+    }
+
+    .art7-title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #3B3838;
+        padding: 1rem;
+    }
+
+    .art7-title h3 {
+        font-size: 1.2rem;
+        margin-bottom: .5rem;
+        font-family: 'Donegal One', serif;
+        text-align: center;
+    }
+
+    .art7-title p {
+        font-size: 1rem;
+        font-weight: 300;
+        text-align: center;
+        max-width: 60vw;
+    }
+
+
+    .art7-circulos {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 1.8rem;
+        color: #3B3838;
+    }
+
+    .art7-circulos ul {
+        list-style: none;
+        text-align: center;
+    }
+
+    .gif-container {
+        width: 150px;
+        height: 150px;
+        background-color: #3B383830;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .art7item {
+        margin: 0;
+        display: flex;
+        min-width: 3rem;
+        min-height: 15rem;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .art7item p {
+        max-width: 10rem;
+        font-size: 0.8rem;
+        line-height: 1.6;
+    }
+
+    #icon-stacks, #floating-plate {
+        width: 40px;
+    }
+
+
+
+
+}
 
 
 
