@@ -923,22 +923,22 @@ footer {
 
     .ono-is {
         width: 100%;
-        height: 100vh;
+        height: 60vh;
         background-color: #FCF9F4;
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: flex-end;
     }
 
     .ono-phrases {
         height: auto;
-        width: 90%;
         max-width: 90%;
         text-align: center;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        margin-bottom: 1rem;
 
     }
 
@@ -951,7 +951,7 @@ footer {
     .changing-phrases {
         border-bottom: solid 1px #3B3838;
         width: 100%;
-        height: 10rem;
+        height: 8rem;
     }
 
     .changing-phrases h2 {
@@ -963,7 +963,7 @@ footer {
 
     .art1-gif-container {
         width: 100%;
-        height: 100vh;
+        height: 40vh;
     }
 
     .art1-gif {
@@ -985,17 +985,19 @@ footer {
     }
 
     .article-phrase {
-        max-width: 100rem;
+        width: 90vw;
+        height: 60vh;
         display: flex;
         align-items: center;
         justify-content: center;
-        position: relative;
-        left: -100px;
+        position: absolute;
+        left: 5%;
     }
 
 
     .article-phrase h2 {
-        font-size: 3rem;
+        width: 90vw;
+        font-size: 2.5rem;
         text-align: center;
         color: #FCF9F4;
         font-family: 'Donegal One', serif;
@@ -1121,7 +1123,7 @@ footer {
 
     .knock {
         width: 100%;
-        height: 80vh;
+        height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -1167,7 +1169,7 @@ footer {
 
     .article5 {
         width: 100%;
-        height: 90vh;
+        height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -1181,9 +1183,9 @@ footer {
     }
 
     .welcome-image video {
-        max-width: 100%;
+        width: 100%;
         object-fit: cover;
-        height: 50vh;
+        height: 40vh;
     }
 
     .invite-ono {
@@ -1225,7 +1227,7 @@ footer {
 
     .article6 {
         width: 100%;
-        height: 90vh;
+        height: 100vh;
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
@@ -1365,7 +1367,7 @@ footer {
 /* ---------------------- ARTICLE 8 ---------------------------------*/
     .article8 {
         max-width: 100%;
-        height: 80vh;
+        height: 100vh;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1376,7 +1378,7 @@ footer {
     }
     
     .art8title {
-        font-size: 2.6rem;
+        font-size: 2rem;
         color: #3B3838;
         font-family: 'Donegal One', serif;
         position: absolute;
@@ -1407,7 +1409,7 @@ footer {
     }
     
     .art8carrusel {
-        top: 2.2rem;
+        top: 1.8rem;
         overflow: hidden;
         position: relative;
         max-width: 100%;
@@ -1418,7 +1420,7 @@ footer {
         position: relative;
         display: flex;
         gap: 3rem;
-        width: calc(300px * 10);
+        width: calc(250px * 10);
         animation: scroll 40s linear infinite;
     }
     
@@ -1430,11 +1432,11 @@ footer {
         display: flex;
         flex-direction: column;
         gap: 2rem;
-        max-width: 300px;
+        max-width: 250px;
         height: 100%;
         cursor: pointer;
         align-items: center;
-        padding-bottom: .5rem;
+        padding-bottom: .4rem;
     }
     
     .carrusel-item:hover {
@@ -1442,7 +1444,7 @@ footer {
     }
     
     .carrusel-item img {
-        max-width: 300px;
+        max-width: 250px;
         display: block;
     }
     
@@ -1457,7 +1459,7 @@ footer {
 
     .article9 {
         width: 100%;
-        height: 70vh;
+        height: 100vh;
         background-image: url(article9bg.jpg);
         background-size: cover;
         background-position: center;
@@ -1470,7 +1472,7 @@ footer {
         display: flex;
         width: 100%;
         justify-content: center;
-        padding-top: 3rem;
+        padding-top: 5rem;
     }
 
     .get-started a {
@@ -1480,12 +1482,12 @@ footer {
 
     .get-started h3 {
         font-family: 'Donegal One', serif;
-        font-size: 3.5rem;
+        font-size: 3rem;
         margin-bottom: 1rem;
     }
 
     .get-started p {
-        font-size: 1.3rem;
+        font-size: 1rem;
         font-weight: 300;
     }
 
