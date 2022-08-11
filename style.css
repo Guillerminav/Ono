@@ -616,6 +616,10 @@ height: 100vh;
     justify-content: center;
 }
 
+.gif-container img {
+    max-width: 90%;
+}
+
 .art7item {
     margin: 0;
     display: flex;
