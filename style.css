@@ -597,7 +597,7 @@ height: 100vh;
     align-items: center;
     justify-content: center;
     text-align: center;
-    gap: 1.5rem;
+    gap: 2.5rem;
     color: #3B3838;
 }
 
@@ -1383,8 +1383,9 @@ footer {
         align-items: center;
         justify-content: center;
         text-align: center;
-        gap: 1.8rem;
+        gap: 2rem;
         color: #3B3838;
+        max-width: 90vw;
     }
 
     .art7-circulos ul {
