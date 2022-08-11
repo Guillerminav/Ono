@@ -862,13 +862,22 @@ footer {
 
     .hamburger {
         position: fixed;
+        width: 20%;
+        height: 15vh;
         z-index: 999;
-        top: 2rem;
-        right: 2rem;
-        padding: 4px;
-        border: black solid 1px;
-        background: white;
+        top: 0;
+        right: 0;
+        padding: 0;
         cursor: pointer;
+        border: none;
+        background-color: transparent;
+    }
+
+    .hamburger i {
+        width: 2rem;
+        height: 2rem;
+        font-size: 2rem;
+        margin: auto;
     }
 
     .closeIcon {
@@ -887,10 +896,20 @@ footer {
         bottom: 0;
         z-index: 800;
         list-style: none;
-        padding: 8rem 1rem 0 1rem;
+        padding: 8rem 1rem 0 2rem;
         display: flex;
         flex-direction: column;
-        background-color: #E0D3CB;
+        background-color: #F8ECDC;
+    }
+
+    #naranjita{
+        color: #FE6340;
+        font-weight: 600;
+    }
+
+    .menuItem {
+        font-size: 1rem;
+        font-weight: 300;
     }
 
     .showMenu {
@@ -918,7 +937,7 @@ footer {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 1.8rem;
+        padding: 1rem;
         position: fixed;
         z-index: 800;
     }
@@ -1216,6 +1235,7 @@ footer {
         width: 100%;
         object-fit: cover;
         height: 40vh;
+        z-index: 999;
     }
 
     .invite-ono {
