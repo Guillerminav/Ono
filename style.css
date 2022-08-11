@@ -1,0 +1,1613 @@
+@import url('https://fonts.googleapis.com/css2?family=Donegal+One&family=Lato:wght@100;300;400;700;900&family=Roboto+Mono:wght@100;200;400;600&display=swap');
+
+
+/*$brand-bright: #FE6340;
+
+$cream: #FCF9F4;
+$cream-dark: #F8ECDC;
+$green: #475A51;
+$brown-light: #E0D3CB;
+$brown: #BC9E7B;
+
+$black: #030303;
+$gray-dark: #3B3838;
+
+$white: #ffffff;
+
+$gray-light: #e7e7e7;
+$gray: #666; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+
+
+
+
+/* ------------------------- HEADER ---------------------------*/
+
+.orange-line-container {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    z-index: 800;
+}
+
+.orange-line {
+    background-color: #FE6340;
+    width: auto;
+    height: 1vh;
+}
+
+.menu-responsive {
+    display: none;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.3rem 3rem;
+    position: fixed;
+    z-index: 800;
+}
+
+nav ul li a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '';
+    color: transparent;
+    background-color: #FE6340;
+    height: 2px;
+    transition: .5s;
+}
+nav ul li a:hover:after {
+    width: 100%;
+    color: #FE6340;
+}
+
+nav ul li a:hover {
+    color: #FE6340;
+}
+
+nav ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    width: 30%;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: #3B3838;
+    font-weight: 600;
+    font-size: 1.1rem;
+    position: relative;
+    transition: .2s;
+}
+
+.nav-derecha {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-izquierda {
+    display: flex;
+    justify-content: flex-start;
+}
+
+#boton-comenzar a {
+    color: #FE6340;
+    font-weight: 600;
+}
+
+#logo {
+    width: 8.6rem;
+}
+
+/*---- ANIMACION NAV -----*/
+
+.scroll-down {
+    opacity: 0;
+    transition: .2s;
+}
+
+.scroll-up {
+    transform: none;
+    transition: .2s;
+}
+
+
+
+/* ------------------------- ARTICLE 1 ---------------------------*/
+
+.main-article {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.ono-is {
+    width: 50%;
+    height: 100vh;
+    background-color: #FCF9F4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ono-phrases {
+    height: auto;
+    width: 90%;
+    max-width: 35rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.ono-phrases p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #3B3838;
+}
+
+.changing-phrases {
+    border-bottom: solid 1px #3B3838;
+    padding: 2rem;
+    width: 100%;
+    height: 6rem;
+}
+
+.changing-phrases h2 {
+    font-size: 2.4rem;
+    color: #3B3838;
+    font-family: 'Donegal One', serif;
+}
+
+
+.art1-gif-container {
+width: 50%;
+height: 100vh;
+}
+
+.art1-gif {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    animation: gif infinite 5s;
+}
+
+@keyframes gif {
+    0% {
+        background-image: url(Ono_Hero_1.jpg);
+        background-size: cover;
+    }
+    30% {
+        background-image: url(Ono_Hero_1.jpg);
+        background-size: cover;
+    }
+    31% {
+        background-image: url(Ono_Hero_2.jpg);
+        background-size: cover;
+    }
+    60% {
+        background-image: url(Ono_Hero_2.jpg);
+        background-size: cover;
+    }
+    61% {
+        background-image: url(Ono_Hero_3.jpg);
+        background-size: cover;
+    }
+    100% {
+        background-image: url(Ono_Hero_3.jpg);
+        background-size: cover;
+    }
+}
+
+
+/* ------------------------------ ARTICLE 2 -----------------------------*/
+
+.green-background {
+    width: 100%;
+    height: 100vh;
+    background-color: #475A51;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.article-phrase {
+    max-width: 40rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: -100px;
+}
+
+.article-phrase h2 {
+    font-size: 3rem;
+    text-align: center;
+    color: #FCF9F4;
+    font-family: 'Donegal One', serif;
+}
+
+.article2title {
+    opacity: 0;
+    transition: 1s all;
+}
+
+.arco {
+    width: 130px;
+    height: 65px;
+    line-height: 150px;
+    position: relative;
+    left: 42rem;
+    background-color: #FE6340;
+    border-bottom-left-radius: 150px;
+    border-bottom-right-radius: 150px;
+    top: -6rem;
+    opacity: 0;
+    transition: 1.5s all;
+}
+
+.goUp {
+    animation: goUp .5s ease-in;
+}
+
+
+@keyframes goUp {
+    from {
+        top: -4rem;
+    }
+
+    to {
+        top: -6rem;
+    }
+}
+
+.medio-circulo {
+    position: relative;
+    width: 100px;
+    height: 150px;
+    left: -80px;
+    background-color: #BC9E7B;
+    border-top-left-radius: 150px;
+    border-top-right-radius: 150px;
+    opacity: 0;
+    transition: 1.5s all 0.5s;
+
+}
+
+.medio-circulo-item {
+    max-width: 75px;
+    height: 150px;
+    background-color: #475A51;
+    position: relative;
+    border-top-left-radius: 150px;
+    border-top-right-radius: 150px;
+    margin: auto;
+    top: 12px;
+}
+
+.medio-circulo-efecto {
+    width: 140px;
+    height: 160px;
+    background-color: #475A51;
+    position: inherit;
+    left: 100px;
+    top: -20px;
+}
+
+@keyframes translateRight {
+    from {
+        left: -20px;
+    }
+    to {
+        left: 100px;
+    }
+}
+
+.translateRight {
+    animation: translateRight 1.4s .2s;
+
+}
+
+
+
+/* --------------------------- ARTICLE 3 --------------------*/
+
+.trust-your-gut-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background-color: #E0D3CB;
+}
+
+.box-images {
+    height: auto;
+    width: 55%;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transition: .5s .5s;
+}
+
+.box-images img {
+    min-width: 500px;
+    max-width: 120%;
+    height: auto;
+    object-fit: cover;
+    margin-left: 5vw;
+}
+
+.trust-your-gut-text-container {
+    font-size: 1.5rem;
+    color: #3B3838;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 40rem;
+    z-index: 400;
+    opacity: 0;
+    transition: .5s .2s;
+}
+
+.trust-your-gut-text-container h3 {
+    font-family: 'Donegal One', serif;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.trust-your-gut-text-container p {
+    font-weight: 300;
+}
+
+.flecha-derecha-container {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0;
+    gap: 0.5rem;
+}
+
+.flecha-derecha-container a {
+    font-size: 1rem;
+    text-decoration: none;
+    color: #3B3838;
+
+}
+
+.flecha-derecha-container i {
+    font-size: 2rem;
+
+}
+
+
+/* ------------------------- ARTICLE 4 ---------------------*/
+
+
+.knock {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #475A51;
+}
+
+.chat {
+    width: 80%;
+    height: 60vh;
+    position: relative;
+    font-size: 3rem;
+    max-width: 50rem;
+    font-family: 'Donegal One', serif;
+}
+
+.toc-toc {
+    position: absolute;
+    color: #FCF9F4;
+    opacity: 0;
+    transition: .5s .5s;
+}
+
+.quien {
+    position: absolute;
+    right: 0;
+    top: 25%;
+    color: #BC9E7B;
+    opacity: 0;
+    transition: .5s 1.5s;
+}
+
+.answer {
+    position: absolute;
+    bottom: 0;
+    max-width: 100%;
+    color: #FCF9F4;
+    opacity: 0;
+    transition: .5s 2.5s;
+}
+
+
+/* ------------------------- ARTICLE 5 ----------------------*/
+
+.article5 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+
+.welcome-image {
+    width: 50vw;
+    height: auto;
+}
+
+.welcome-image video {
+    max-width: 100%;
+    object-fit: cover;
+    height: 100vh;
+}
+
+.invite-ono {
+    width: 50vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.invite-ono-items {
+    height: auto;
+    width: 90%;
+    max-width: 30rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 1.5rem;
+    color: #3B3838;
+    transition: .5s;
+}
+
+.moverHaciaArriba {
+    animation: moverHaciaArriba .5s;
+    transition: .5s;
+}
+
+.invite-ono-items h3 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    font-family: 'Donegal One', serif;
+}
+
+.invite-ono-items p {
+    font-weight: 300;
+}
+
+/* ------------------------------------ ARTICLE 6 ------------------------------*/
+
+.article6 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.zero-waste-container {
+    width: 50vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.zero-waste-items {
+    height: auto;
+    width: 90%;
+    max-width: 30rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 1.5rem;
+    color: #3B3838;
+    transition: .5s;
+}
+
+.zero-waste-items h3 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    font-family: 'Donegal One', serif;
+    max-width: 15rem;
+}
+
+
+.zero-waste-items p {
+    font-weight: 300;
+}
+
+
+.boxes-gif {
+    width: 50vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FE6340;
+}
+
+.boxes-gif video {
+    width: 20rem;
+}
+
+
+
+/* --------------------------- ARTICLE 7------------------------------*/
+
+.article7 {
+    width: 100%;
+    height: 100vh;
+    background-color: #BC9E7B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.art7-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #3B3838;
+}
+
+.art7-title h3 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    font-family: 'Donegal One', serif;
+}
+
+.art7-title p {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+
+
+.art7-circulos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1.5rem;
+    color: #3B3838;
+}
+
+.art7-circulos ul {
+    list-style: none;
+    text-align: center;
+}
+
+.gif-container {
+    width: 150px;
+    height: 150px;
+    background-color: #3B383830;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.art7item {
+    margin: 0;
+    display: flex;
+    min-width: 3rem;
+    min-height: 15rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.art7item p {
+    max-width: 10rem;
+    font-size: 0.8rem;
+    line-height: 1.6;
+}
+
+#icon-stacks, #floating-plate {
+    width: 40px;
+}
+
+
+
+/* ------------------------------ ARTICLE 8 -----------------------------------*/
+
+.article8 {
+    max-width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5.5rem;
+    overflow: hidden;
+    background-color: #FCF9F4;
+
+}
+
+.art8title {
+    font-size: 2.6rem;
+    color: #3B3838;
+    font-family: 'Donegal One', serif;
+    position: absolute;
+    z-index: 999;
+}
+
+.cartelito {
+    display: flex;
+    position: absolute;
+    top: 26%;
+    background-color: #FCF9F4;
+    width: 10rem;
+    height: 4.5rem;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.cartelito a {
+    font-weight: 300;
+    border-bottom: #3B3838 solid 2px;
+}
+
+.activo {
+    opacity: 1 !important;
+    z-index: 999;
+    transition: .15s;
+}
+
+.art8carrusel {
+    top: 2.2rem;
+	overflow: hidden;
+	position: relative;
+	max-width: 100%;
+}
+
+
+.carrusel-tracker {
+    position: relative;
+    display: flex;
+    gap: 3rem;
+    width: calc(350px * 10);
+    animation: scroll 40s linear infinite;
+}
+
+.carrusel-tracker:hover {
+    animation-play-state: paused;
+}
+
+.carrusel-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 350px;
+    height: 100%;
+    cursor: pointer;
+    align-items: center;
+    padding-bottom: .5rem;
+}
+
+.carrusel-item:hover {
+    border-bottom: #3B3838 solid 2px;
+}
+
+.carrusel-item img {
+    max-width: 350px;
+    display: block;
+}
+
+.carrusel-item p {
+    font-size: 1.5rem;
+    color: #3B3838;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+
+/* ----------------------------- ERTICLE 9 -----------------------*/
+
+.article9 {
+    width: 100%;
+    height: 100vh;
+    background-image: url(article9bg.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    
+}
+
+.get-started {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+}
+
+.get-started a {
+    text-decoration: none;
+    color: #3B3838;
+}
+
+.get-started h3 {
+    font-family: 'Donegal One', serif;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.get-started p {
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+
+
+/* -------------------------- FOOTER --------------------------*/
+
+footer {
+    width: 100%;
+    height: 35vh;
+    background-color: #475A51;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.links {
+    display: flex;
+    width: 100%;
+    height: 60%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links a {
+    text-decoration: none;
+    color: #FCF9F4;
+    font-family: 'Donegal One', serif;
+    font-size: 3rem;
+    padding-left: 5rem;
+    text-align: start;
+}
+
+.links a:hover {
+    color: #000;
+    transition: .2s;
+}
+
+.ourstory {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+
+}
+.thefarm {
+    border-left: #000 solid 1px;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+}
+
+.copyright {
+    height: 40%;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #000;
+    justify-content: space-between;
+    color: #FCF9F4;
+}
+
+.byGuille {
+    margin-left: 3rem;
+}
+
+.byGuille a {
+    text-decoration: none;
+    color: #FCF9F4;
+}
+
+.byGuille a:hover {
+    color: #000;
+    transition: .2s;
+}
+
+.address {
+    margin-right: 3rem;
+}
+
+
+
+@media screen and (max-width: 600px) {
+
+    body {
+        width: 100vw;
+        overflow-x: hidden;
+    }
+
+    /* ------------------------- HEADER ---------------------------*/
+
+    .orange-line-container {
+        width: 100vw;
+        height: auto;
+        position: fixed;
+        z-index: 999;
+    }
+
+    .orange-line {
+        background-color: #FE6340;
+        width: auto;
+        height: 10px;
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.8rem;
+        position: fixed;
+        z-index: 800;
+    }
+
+    .menu-responsive {
+        display: flex;
+        width: 40px;
+        height: 40px;
+        border: solid 2px black;
+    }
+
+    nav ul {
+        display: none
+    }
+
+    nav ul a {
+        display: none;
+    }
+
+    .nav-derecha {
+        display: none
+    }
+
+    .nav-izquierda {
+        display: none
+    }
+
+    .logo-container {
+        width: 80%;
+        text-align: left;
+    }
+
+    #logo {
+        width: 9rem;
+    }
+
+    /* ------------------------- ARTICLE 1 ---------------------------*/
+
+    .main-article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .ono-is {
+        width: 100%;
+        height: 100vh;
+        background-color: #FCF9F4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ono-phrases {
+        height: auto;
+        width: 90%;
+        max-width: 90%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+    }
+
+    .ono-phrases p {
+        font-size: 1.4rem;
+        font-weight: 300;
+        color: #3B3838;
+    }
+
+    .changing-phrases {
+        border-bottom: solid 1px #3B3838;
+        width: 100%;
+        height: 10rem;
+    }
+
+    .changing-phrases h2 {
+        font-size: 2rem;
+        color: #3B3838;
+        font-family: 'Donegal One', serif;
+    }
+
+
+    .art1-gif-container {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .art1-gif {
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        animation: gif infinite 5s;
+    }
+
+
+
+    /* ------------------------------ ARTICLE 2 -----------------------------*/
+
+
+    .green-background {
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .article-phrase {
+        max-width: 100rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        left: -100px;
+    }
+
+
+    .article-phrase h2 {
+        font-size: 3rem;
+        text-align: center;
+        color: #FCF9F4;
+        font-family: 'Donegal One', serif;
+        position: absolute;
+    }
+
+    .arco {
+        width: 100px;
+        height: 50px;
+        line-height: 150px;
+        position: relative;
+        left: 150px;
+        background-color: #FE6340;
+        border-bottom-left-radius: 150px;
+        border-bottom-right-radius: 150px;
+        top: -8rem;
+        opacity: 1;
+        transition: 1.5s all;
+    }
+
+    .medio-circulo {
+        position: relative;
+        width: 100px;
+        height: 150px;
+        left: -220px;
+        background-color: #BC9E7B;
+        border-top-left-radius: 150px;
+        border-top-right-radius: 150px;
+        opacity: 1;
+        transition: 1.5s all 0.5s;
+    
+    }
+    
+    .medio-circulo-item {
+        max-width: 75px;
+        height: 150px;
+        background-color: #475A51;
+        position: relative;
+        border-top-left-radius: 150px;
+        border-top-right-radius: 150px;
+        margin: auto;
+        top: 12px;
+    }
+
+    /* --------------------------- ARTICLE 3 --------------------*/
+
+    .trust-your-gut-container {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: #E0D3CB;
+    }
+
+
+    .box-images {
+        height: auto;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: .5s .5s;
+        overflow: hidden;
+    }
+    
+    .box-images img {
+        min-width: 400px;
+        max-width: 120%;
+        height: auto;
+        object-fit: cover;
+        margin: auto;
+    }
+    
+    .trust-your-gut-text-container {
+        font-size: 1.2rem;
+        color: #3B3838;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 40rem;
+        z-index: 400;
+        opacity: 0;
+        transition: .5s .2s;
+    }
+    
+    .trust-your-gut-text-container h3 {
+        font-family: 'Donegal One', serif;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+    
+    .trust-your-gut-text-container p {
+        font-weight: 300;
+    }
+    
+    .flecha-derecha-container {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 0;
+        gap: 0.5rem;
+    }
+    
+    .flecha-derecha-container a {
+        font-size: .8rem;
+        text-decoration: none;
+        color: #3B3838;
+    
+    }
+    
+    .flecha-derecha-container i {
+        font-size: 1.5rem;
+    
+    }
+
+
+
+    /* ------------------------- ARTICLE 4 ---------------------*/
+
+
+    .knock {
+        width: 100%;
+        height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #475A51;
+    }
+
+    .chat {
+        width: 80%;
+        height: 60vh;
+        position: relative;
+        font-size: 2rem;
+        max-width: 50rem;
+        font-family: 'Donegal One', serif;
+    }
+
+    .toc-toc {
+        position: absolute;
+        color: #FCF9F4;
+        opacity: 0;
+        transition: .5s .5s;
+    }
+
+    .quien {
+        position: absolute;
+        right: 0;
+        top: 25%;
+        color: #BC9E7B;
+        opacity: 0;
+        transition: .5s 1.5s;
+    }
+
+    .answer {
+        position: absolute;
+        bottom: 0;
+        max-width: 100%;
+        color: #FCF9F4;
+        opacity: 0;
+        transition: .5s 2.5s;
+    }
+
+
+    /* ------------------------- ARTICLE 5 ----------------------*/
+
+    .article5 {
+        width: 100%;
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+
+    .welcome-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .welcome-image video {
+        max-width: 100%;
+        object-fit: cover;
+        height: 50vh;
+    }
+
+    .invite-ono {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .invite-ono-items {
+        height: auto;
+        width: 90%;
+        max-width: 30rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        font-size: 1.2rem;
+        color: #3B3838;
+        transition: .5s;
+    }
+
+    .moverHaciaArriba {
+        animation: moverHaciaArriba .5s;
+        transition: .5s;
+    }
+
+    .invite-ono-items h3 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        font-family: 'Donegal One', serif;
+    }
+
+    .invite-ono-items p {
+        font-weight: 300;
+    }
+
+
+    /* ------------------------------------ ARTICLE 6 ------------------------------*/
+
+    .article6 {
+        width: 100%;
+        height: 90vh;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content:center;
+        gap: 2rem;
+    }
+
+    .zero-waste-container {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .zero-waste-items {
+        height: auto;
+        width: 90%;
+        max-width: 30rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        font-size: 1.2rem;
+        color: #3B3838;
+        transition: .5s;
+    }
+
+    .zero-waste-items h3 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        font-family: 'Donegal One', serif;
+        max-width: 15rem;
+    }
+
+
+    .zero-waste-items p {
+        font-weight: 300;
+    }
+
+
+    .boxes-gif {
+        width: 100vw;
+        height: 30vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #FE6340;
+    }
+
+    .boxes-gif video {
+        width: 30vw;
+    }
+
+
+
+    /* --------------------------- ARTICLE 7------------------------------*/
+
+    .article7 {
+        width: 100%;
+        height: auto;
+        background-color: #BC9E7B;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 5rem;
+        padding: 2rem 0;
+    }
+
+    .art7-title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #3B3838;
+        padding: 1rem;
+    }
+
+    .art7-title h3 {
+        font-size: 1.8rem;
+        margin-bottom: .5rem;
+        font-family: 'Donegal One', serif;
+        text-align: center;
+    }
+
+    .art7-title p {
+        font-size: 1.5rem;
+        font-weight: 300;
+        text-align: center;
+    }
+
+
+    .art7-circulos {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 1.8rem;
+        color: #3B3838;
+    }
+
+    .art7-circulos ul {
+        list-style: none;
+        text-align: center;
+    }
+
+    .gif-container {
+        width: 150px;
+        height: 150px;
+        background-color: #3B383830;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .art7item {
+        margin: 0;
+        display: flex;
+        min-width: 3rem;
+        min-height: 15rem;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .art7item p {
+        max-width: 10rem;
+        font-size: 0.8rem;
+        line-height: 1.6;
+    }
+
+    #icon-stacks, #floating-plate {
+        width: 40px;
+    }
+
+/* ---------------------- ARTICLE 8 ---------------------------------*/
+    .article8 {
+        max-width: 100%;
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 2rem;
+        overflow: hidden;
+        background-color: #FCF9F4;
+    
+    }
+    
+    .art8title {
+        font-size: 2.6rem;
+        color: #3B3838;
+        font-family: 'Donegal One', serif;
+        position: absolute;
+        z-index: 999;
+    }
+    
+    .cartelito {
+        display: flex;
+        position: absolute;
+        top: 26%;
+        background-color: #FCF9F4;
+        width: 10rem;
+        height: 4.5rem;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+    }
+    
+    .cartelito a {
+        font-weight: 300;
+        border-bottom: #3B3838 solid 2px;
+    }
+    
+    .activo {
+        opacity: 1 !important;
+        z-index: 999;
+        transition: .15s;
+    }
+    
+    .art8carrusel {
+        top: 2.2rem;
+        overflow: hidden;
+        position: relative;
+        max-width: 100%;
+    }
+    
+    
+    .carrusel-tracker {
+        position: relative;
+        display: flex;
+        gap: 3rem;
+        width: calc(300px * 10);
+        animation: scroll 40s linear infinite;
+    }
+    
+    .carrusel-tracker:hover {
+        animation-play-state: paused;
+    }
+    
+    .carrusel-item {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        max-width: 300px;
+        height: 100%;
+        cursor: pointer;
+        align-items: center;
+        padding-bottom: .5rem;
+    }
+    
+    .carrusel-item:hover {
+        border-bottom: #3B3838 solid 2px;
+    }
+    
+    .carrusel-item img {
+        max-width: 300px;
+        display: block;
+    }
+    
+    .carrusel-item p {
+        font-size: 1.2rem;
+        color: #3B3838;
+        font-weight: 300;
+        margin-bottom: 1rem;
+    }
+
+    /* ----------------------------- ERTICLE 9 -----------------------*/
+
+    .article9 {
+        width: 100%;
+        height: 70vh;
+        background-image: url(article9bg.jpg);
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: flex-start;
+        justify-content: left;        
+    }
+
+    .get-started {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        padding-top: 3rem;
+    }
+
+    .get-started a {
+        text-decoration: none;
+        color: #3B3838;
+    }
+
+    .get-started h3 {
+        font-family: 'Donegal One', serif;
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .get-started p {
+        font-size: 1.3rem;
+        font-weight: 300;
+    }
+
+
+    
+    
+/* -------------------------- FOOTER --------------------------*/
+
+    footer {
+        width: 100%;
+        height: 35vh;
+        background-color: #475A51;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .links {
+        display: flex;
+        width: 100%;
+        height: 40%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .links a {
+        text-decoration: none;
+        color: #FCF9F4;
+        font-family: 'Donegal One', serif;
+        font-size: 1.5rem;
+        padding-left: 1rem;
+        text-align: start;
+    }
+
+    .links a:hover {
+        color: #000;
+        transition: .2s;
+    }
+
+    .ourstory {
+        width: 100%;
+        height: 80%;
+        display: flex;
+        align-items: center;
+
+    }
+    .thefarm {
+        border-left: #000 solid 1px;
+        width: 100%;
+        height: 80%;
+        display: flex;
+        align-items: center;
+    }
+
+    .copyright {
+        height: 60%;
+        display: flex;
+        align-items: center;
+        border-top: 1px solid #000;
+        justify-content: space-between;
+        color: #FCF9F4;
+        font-size: .8rem;
+    }
+
+    .byGuille {
+        margin-left: 1rem;
+    }
+
+    .byGuille a {
+        text-decoration: none;
+        color: #FCF9F4;
+    }
+
+    .byGuille a:hover {
+        color: #000;
+        transition: .2s;
+    }
+
+    .address {
+        margin-right: 1rem;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* EFECTOS */
+
+.appear-effect {
+    opacity: 1;
+}
+
+.moverHaciaArriba {
+    animation: moverHaciaArriba .5s;
+}
+
+@keyframes moverHaciaArriba {
+    from {
+        margin-top: 150px;
+    }
+
+    to {
+        margin-top: 0;
+    }
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-350px * 5));
+    }
+}
