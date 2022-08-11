@@ -902,6 +902,10 @@ footer {
         background-color: #F8ECDC;
     }
 
+    .menu:focus {
+        color: #000;
+    }
+
     #naranjita{
         color: #FE6340;
         font-weight: 600;
@@ -1597,18 +1601,20 @@ footer {
         display: flex;
         align-items: center;
         border-top: 1px solid #000;
-        justify-content: space-between;
+        justify-content: center;
         color: #FCF9F4;
         font-size: .8rem;
+        flex-direction: column;
     }
 
     .byGuille {
-        margin-left: 1rem;
+        margin: .5rem;
     }
 
     .byGuille a {
         text-decoration: none;
         color: #FCF9F4;
+        font-size: .7rem;
     }
 
     .byGuille a:hover {
@@ -1617,7 +1623,8 @@ footer {
     }
 
     .address {
-        margin-right: 1rem;
+        margin-right: 0;
+        font-size: .7rem;
     }
 
 
