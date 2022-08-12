@@ -1,0 +1,140 @@
+
+body {
+    color: #3B3838;
+}
+
+
+#enfatizar {
+    border-bottom: solid 2px #3B3838;
+}
+
+#enfatizar:hover {
+    border-bottom: solid 2px #FE6340
+}
+
+nav ul li #enfatizar:hover:after {
+    width: 0;
+    color: #FE6340;;
+}
+
+
+.nh {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.nh h2, h3 {
+    font-family: 'Donegal One', serif;
+}
+
+.nh h3 {
+    font-size: 1rem;
+    padding: 2rem 0 1rem 0;
+}
+
+.nh h2 {
+    font-size: 2rem;
+    padding: 2rem 0 1rem 0;
+}
+
+.nh p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 2rem;
+    margin: .5rem 0;
+}
+
+.nh-fotos {
+    width: 50%;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+}
+
+.nh-1 {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+
+/* 
+.img-box {
+    position: relative;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    z-index: 800;
+} */
+
+.nh-2 {
+    width: 38rem;
+    max-width: 100%;
+    position: sticky;
+    margin-top: 100vh;
+    top: 35vh;
+}
+
+.nh-3 {
+    width: 36rem;
+    max-width: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 10rem;
+    z-index: 999;
+}
+
+
+.nh-info {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.nh-text {
+    padding: 10rem 1rem 1rem 1rem;
+    max-width: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.nh-getono {
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #FE6340;
+}
+
+.nh-getono-link {
+    width: 100%;
+    text-decoration: none;
+    color: #FCF9F4;
+    padding: 1rem;
+    max-width: 30rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.nh-getono-link h2 {
+    font-size: 2.5rem;
+}
+
+.fa-arrow-right {
+    font-size: 2rem;
+    color: #3B3838;
+}
+
+
+.nh-footer {
+    z-index: 999;
+}

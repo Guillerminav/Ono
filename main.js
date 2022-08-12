@@ -8,17 +8,17 @@ let hamburger = document.querySelector(".hamburger")
 let closeIcon = document.querySelector(".closeIcon")
 let menuIcon = document.querySelector(".menuIcon")
 
+closeIcon.style.display = "none"
+
 function toggleMenu() {
     if(menu.classList.contains("showMenu")) {
         menu.classList.remove("showMenu")
         closeIcon.style.display = "none"
         menuIcon.style.display = "block"
-        console.log("menu cerrado")
     } else {
         menu.classList.add("showMenu")
         closeIcon.style.display = "block"
         menuIcon.style.display = "none"
-        console.log("menu abierto")
     }
 }
 
@@ -31,10 +31,6 @@ hamburger.addEventListener("click", toggleMenu)
 let phrasesArr = ["Nutrición personalizada", "De la granja a la mesa", "Creado por profesionales"]
 let phrase = document.querySelector('.changing-text')
 
-let charIndex = 0
-let phrasesIndex = 0
-
-
 function delWriter(text, i, cb) {
     if (i >= 0) {
         phrase.innerHTML = text.substring(0, i--)
@@ -45,7 +41,6 @@ function delWriter(text, i, cb) {
         setTimeout(cb, 40)
     }
 }
-
 
 function typeWriter(text, i, cb) {
     if (i < text.length + 1) {
@@ -60,7 +55,6 @@ function typeWriter(text, i, cb) {
     }
 }
 
-
 function startWriter(i) {
     if (typeof phrasesArr[i] == "undefined") {
         setTimeout(function () {
@@ -72,7 +66,6 @@ function startWriter(i) {
         })
     }
 }
-
 
 setTimeout(function() {
     startWriter(0)
@@ -107,17 +100,8 @@ window.addEventListener("scroll", () => {
     lastScroll = currentScroll
 })
 
-// ARTICLE 1 GIF
-let imgContainer = document.querySelector('.art1carrusel')
-let img1 = document.querySelector('.article1img1')
-let img2 = document.querySelector('.article1img2')
-let img3 = document.querySelector('.article1img3')
-
-// RESUELTO EN CSS
-
 
 // EFECTO APARICION DE ELEMENTOS ART 2
-
 
 let greenBg = document.querySelector('.green-background')
 let arco1 = document.querySelector('.arco')
@@ -131,7 +115,7 @@ let appear = "appear-effect"
 let options = {
     root: null,
     rootMargin: '0px 0px 0px 0px',
-    threshold: 0.3
+    threshold: 0
 }
 
 
@@ -226,8 +210,6 @@ let zeroWasteText = document.querySelector('.zero-waste-items')
 moverArribaObservar.observe(zeroWasteText)
 
 
-
-
 // CARRUSEL DE IMAGENES MENU DE HOY
 // resuelto con css
 
@@ -237,10 +219,7 @@ let sliderItems = document.querySelectorAll('.carrusel-item')
 let cartelitos = document.querySelectorAll('.cartelito')
 let activo = "activo"
 
-
-// CARTEL DE 'QUICK LOOK DENTRO DE LAS IMAGENES DEL MENU'
-
-
+// CARTEL 'QUICK LOOK' DENTRO DE LAS IMAGENES DEL MENU
 
 for(let cartelito of cartelitos) {
     cartelito.addEventListener("mouseenter", function() {
