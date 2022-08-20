@@ -37,13 +37,14 @@ body {
     width: 100%;
     height: auto;
     position: fixed;
-    z-index: 800;
+    z-index: 99999;
 }
 
 .orange-line {
     background-color: #FE6340;
     width: auto;
     height: 1vh;
+    z-index: 99999;
 }
 
 .menu-responsive {
@@ -57,7 +58,7 @@ nav {
     align-items: center;
     padding: 2.3rem 3rem;
     position: fixed;
-    z-index: 800;
+    z-index: 900;
 }
 
 nav ul li a:after {
@@ -666,7 +667,7 @@ height: 100vh;
     color: #3B3838;
     font-family: 'Donegal One', serif;
     position: absolute;
-    z-index: 999;
+    z-index: 400;
 }
 
 .cartelito {
@@ -679,6 +680,7 @@ height: 100vh;
     align-items: center;
     justify-content: center;
     opacity: 0;
+    z-index: 500;
 }
 
 .cartelito a {
@@ -688,7 +690,6 @@ height: 100vh;
 
 .activo {
     opacity: 1 !important;
-    z-index: 999;
     transition: .15s;
 }
 
@@ -704,7 +705,7 @@ height: 100vh;
     position: relative;
     display: flex;
     gap: 3rem;
-    width: calc(350px * 10);
+    width: calc(350px * 20);
     animation: scroll 40s linear infinite;
 }
 
@@ -723,6 +724,7 @@ height: 100vh;
     padding-bottom: .5rem;
 }
 
+
 .carrusel-item:hover {
     border-bottom: #3B3838 solid 2px;
 }
@@ -737,6 +739,169 @@ height: 100vh;
     color: #3B3838;
     font-weight: 300;
     margin-bottom: 1rem;
+}
+
+/* ----------- ART 8 POPUP ---------*/
+
+.ventanaModal {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    z-index: 998;
+    display: none;
+}
+
+
+.modal-items {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    opacity: 1;
+}
+
+.activar {
+    opacity: 1;
+    transition: 1s;
+}
+
+.modal-item {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+
+.modal-imagen {
+    max-width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 10;
+    object-fit: cover;
+}
+
+.modal-espacio {
+    width: 45%;
+}
+
+.modal-imagen img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+
+.modal-texto {
+    width: 45%;
+    z-index: 50;
+    padding: 0 2rem;
+    color: #3B3838;
+    max-width: 30rem;
+}
+
+.modal-title {
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 2rem;
+}
+
+.modal-description {
+    border-top: 1px solid #3B3838;
+    margin: 1rem 0;
+    padding-top: 1rem;
+    font-weight: 300;
+
+}
+
+.modal-texto_beneficios-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1rem 0;
+    font-size: .9rem;
+}
+
+.beneficios-item-img {
+    display: flex;
+    height: 3rem;
+    gap: .2rem;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: .8rem;
+    font-weight: 300;
+}
+.beneficios-item-img img {
+    width: 30px;
+}
+#cuchara {
+    width: 15px;
+}
+.beneficios-items {
+    display: flex;
+    gap: 2rem;
+}
+
+@keyframes he {
+    100% {
+        left: 0;
+    }
+}
+
+.click1 {
+    position: absolute;
+    z-index: 500;
+    top: 50%;
+    right: 5%;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+.click2 {
+    position: absolute;
+    z-index: 500;
+    top: 50%;
+    left: 5%;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+.close {
+    position: absolute;
+    z-index: 500;
+    top: 5%;
+    right: 5%;
+    cursor: pointer;
+    font-size: .8rem;
+}
+
+.rotateenter {
+    transform: rotate(180deg);
+    transition: .5s;
+}
+
+.rotateleave {
+    transform: rotate(0);
+    transition: .5s;
+}
+
+
+.modal-activo {
+    display: block;
+    z-index: 500;
+}
+
+.activo {
+    opacity: 1 !important;
+    transition: .15s;
 }
 
 

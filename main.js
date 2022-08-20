@@ -86,17 +86,13 @@ window.addEventListener("scroll", () => {
         navegation.classList.remove(scrollUp)
         return
     }
-
     if (currentScroll > lastScroll && !navegation.classList.contains(scrollDown)) {
         navegation.classList.remove(scrollUp)
         navegation.classList.add(scrollDown)
-
     } else if (currentScroll < lastScroll && navegation.classList.contains(scrollDown)){
         navegation.classList.remove(scrollDown)
         navegation.classList.add(scrollUp)
-
     }
-
     lastScroll = currentScroll
 })
 
@@ -231,3 +227,389 @@ for(let cartelito of cartelitos) {
 }
 
 
+// CARRUSEL PRINCIPAL
+
+let carruselTracker = document.querySelector('.carrusel-tracker')
+let carruselPrincipal = Array.from(carruselTracker.children)
+let lastItem = carruselPrincipal[carruselPrincipal.length - 1]
+let carruselItem = document.querySelectorAll('.carrusel-item')
+let arrayDeItems = Array.from(carruselItem)
+// console.log(arrayDeItems)
+
+
+
+// function moverItem() {
+//     let firstItem = carruselPrincipal.shift()
+//     firstItem.style.opacity = "0"
+//     carruselPrincipal.push(firstItem)
+//     carruselTracker.appendChild(firstItem)
+//     function agregarOpacity() {
+//         firstItem.style.opacity = "1"
+//         firstItem.style.transition = ".2s"
+//     }
+//     setTimeout(agregarOpacity, 200)
+// }
+
+// setInterval(moverItem, 4000)
+
+
+
+
+// VENTANA MODAL (POPUP)
+
+const closeButton = document.querySelector('.close')
+const ventanaModal = document.querySelector('.ventanaModal')
+const active = 'modal-activo'
+
+const modalItems = document.querySelector('.modal-items')
+let sliderSection = document.querySelectorAll('.modal-item')
+let sliderSectionLast = sliderSection[sliderSection.length - 1]
+
+let verMas = document.querySelectorAll('.verMas')
+
+let itemsArray = Array.from(modalItems.children)
+
+// let lamb = document.querySelector('.lamb')
+// let vegetales = document.querySelector('.vegetales')
+// let waffle = document.querySelector('.waffles')
+// let yogurt = document.querySelector('.yogurt')
+// let falafel = document.querySelector('.falafel')
+
+let next = document.querySelector('.click1')
+let prev = document.querySelector('.click2')
+
+let productos = [
+    {
+        id: 1,
+        src: "modal1.jpg",
+        title: "Cordero de laboratorio y wraps de rabano y sandía con crema de ajo y finas hierbas. Servido con farro de almendras tostado.",
+        description: "Lamb and radishes come together with Mediterranean flavors and bright lemon and garlic yogurt sauce, while parsley and mint complement the hint of bitterness from the radicchio and bring fresh flavors to the chewy and crunchy almond farro.",
+        benefits: {
+            "Probióticos": "Yogurt",
+            "Antioxidantes":  ["Parsley", "Almendras"],
+            "Proteína basada en plantas": "Farro"
+        }
+    },
+    {
+        id: 2,
+        src: "modal2.jpg",
+        title: "Vegetales asados con quinoa y cilantro.",
+        description: "Roasted kabocha squash, golden and red beets, and broccolini make this sprouted quinoa mix bright and beautiful, and fragrant with warm spices. Sprouted chickpeas add bite and protein and a cilantro finishes the dish with a hit of fresh, green flavor.",
+        benefits: {
+            "Anti-inflamatorio": "Beets",
+            "Antioxidantes":  "Coriander",
+            "Immuomodulation": "Cumin",
+            "Proteína basada en plantas": "Quinoa"
+        }
+    },
+    {
+        id: 3,
+        src: "modal3.jpg",
+        title: "Waffle de harina de grillo con frutilla y kombucha.",
+        description: "This granola is savory and spicy, chewy with jackfruit and crunchy with pumpkin seeds and walnuts. Put over Icelandic skyr, it’s full of healthy protein, and when topped with turmeric and arugula, takes on clean, refreshing flavors.",
+        benefits: {
+            "Anti-inflamatorio": "Turmeric",
+            "Antioxidantes":  "Coriander",
+            "Polyphenols": "Millet",
+            "Probiotics": "Yogurt"
+        }
+    },
+    {
+        id: 4,
+        src: "modal4.jpg",
+        title: "Yogurt islándico con granola y semillas de girasol y nueces.",
+        description: "This granola is savory and spicy, chewy with jackfruit and crunchy with pumpkin seeds and walnuts. Put over Icelandic skyr, it’s full of healthy protein, and when topped with turmeric and arugula, takes on clean, refreshing flavors.",
+        benefits: {
+            "Anti-inflamatorio": "Turmeric",
+            "Antioxidantes":  "Coriander",
+            "Polyphenols": "Millet",
+            "Probiotics": "Yogurt"
+        }
+    },
+    {
+        id: 5,
+        src: "modal5.jpg",
+        title: "Falafel verde con brócoli y tabbouleh.",
+        description: "You’ve never seen falafel as green as this – it’s the spirulina, which is not just beautiful, but also delicious. It’s served in a pita that’s made of high-protein cricket flour, with a side of tabbouleh made with broccoli, parsley, grated parsley root, and pomegranate seeds.",
+        benefits: {
+            "Anti-inflamatorio": "Spirulina",
+            "Antioxidantes":  ["Parsley", "Pomegranate", "Brocoli"],
+            "Proteina": "Harina de grillo",
+            "Plant waste": "Parsley Root"
+        }
+    },
+    {
+        id: 1,
+        src: "modal1.jpg",
+        title: "Cordero de laboratorio y wraps de rabano y sandía con crema de ajo y finas hierbas. Servido con farro de almendras tostado.",
+        description: "Lamb and radishes come together with Mediterranean flavors and bright lemon and garlic yogurt sauce, while parsley and mint complement the hint of bitterness from the radicchio and bring fresh flavors to the chewy and crunchy almond farro.",
+        benefits: {
+            "Probióticos": "Yogurt",
+            "Antioxidantes":  ["Parsley", "Almendras"],
+            "Proteína basada en plantas": "Farro"
+        }
+    },
+    {
+        id: 2,
+        src: "modal2.jpg",
+        title: "Vegetales asados con quinoa y cilantro.",
+        description: "Roasted kabocha squash, golden and red beets, and broccolini make this sprouted quinoa mix bright and beautiful, and fragrant with warm spices. Sprouted chickpeas add bite and protein and a cilantro finishes the dish with a hit of fresh, green flavor.",
+        benefits: {
+            "Anti-inflamatorio": "Beets",
+            "Antioxidantes":  "Coriander",
+            "Immuomodulation": "Cumin",
+            "Proteína basada en plantas": "Quinoa"
+        }
+    },
+    {
+        id: 3,
+        src: "modal3.jpg",
+        title: "Waffle de harina de grillo con frutilla y kombucha.",
+        description: "This granola is savory and spicy, chewy with jackfruit and crunchy with pumpkin seeds and walnuts. Put over Icelandic skyr, it’s full of healthy protein, and when topped with turmeric and arugula, takes on clean, refreshing flavors.",
+        benefits: {
+            "Anti-inflamatorio": "Turmeric",
+            "Antioxidantes":  "Coriander",
+            "Polyphenols": "Millet",
+            "Probiotics": "Yogurt"
+        }
+    },
+    {
+        id: 4,
+        src: "modal4.jpg",
+        title: "Yogurt islándico con granola y semillas de girasol y nueces.",
+        description: "This granola is savory and spicy, chewy with jackfruit and crunchy with pumpkin seeds and walnuts. Put over Icelandic skyr, it’s full of healthy protein, and when topped with turmeric and arugula, takes on clean, refreshing flavors.",
+        benefits: {
+            "Anti-inflamatorio": "Turmeric",
+            "Antioxidantes":  "Coriander",
+            "Polyphenols": "Millet",
+            "Probiotics": "Yogurt"
+        }
+    },
+    {
+        id: 5,
+        src: "modal5.jpg",
+        title: "Falafel verde con brócoli y tabbouleh.",
+        description: "You’ve never seen falafel as green as this – it’s the spirulina, which is not just beautiful, but also delicious. It’s served in a pita that’s made of high-protein cricket flour, with a side of tabbouleh made with broccoli, parsley, grated parsley root, and pomegranate seeds.",
+        benefits: {
+            "Anti-inflamatorio": "Spirulina",
+            "Antioxidantes":  ["Parsley", "Pomegranate", "Brocoli"],
+            "Proteina": "Harina de grillo",
+            "Plant waste": "Parsley Root"
+        }
+    },
+
+]
+
+// for(let i = 0; i < productos.length; i++) {
+//     console.log(productos[i].id)
+//     console.log(productos[i].src)
+//     console.log(productos[i].benefits["Antioxidantes"])
+
+
+
+// }
+
+let itemIndex = 0
+
+arrayDeItems.forEach(boton => {
+    boton.addEventListener('click', (event) => {
+        navegation.style.display = "none"
+        
+        ventanaModal.classList.add(active)
+        document.body.style.overflow = "hidden"
+
+        itemIndex = carruselPrincipal.indexOf(event.currentTarget)
+        console.log(itemIndex)
+        
+
+        modalItems.innerHTML = `<div class="modal-item" id="modal-item">
+                            <div class="modal-imagen">
+                                <img id="modal-lamb" src="${productos.at(itemIndex).src}" alt="">
+                            </div>
+                            <div class="modal-espacio"></div>
+                            <div class="modal-texto">
+                                <p class="modal-title">${productos.at(itemIndex).title}</p>
+                                <p class="modal-description">${productos.at(itemIndex).description}</p>
+                                <div class="modal-texto_beneficios">
+                                    <h4>BENEFICIOS</h4>
+                                    <div class="modal-texto_beneficios-container">
+                                        <div class="beneficios-item">
+                                            <p>Probióticos</p>
+                                            <div class="beneficios-items">
+                                                <div class="beneficios-item-img">
+                                                    <img id="cuchara" src="benefits-yogurt.png" alt="">
+                                                    <p>Yogurt</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="beneficios-item">
+                                            <p>Antioxidantes</p>
+                                            <div class="beneficios-items">
+                                                <div class="beneficios-item-img">
+                                                    <img src="benefits-parsley.png" alt="">
+                                                    <p>Parsley</p>
+                                                </div>
+                                                <div class="beneficios-item-img">
+                                                    <img src="benefits-almonds.png" alt="">
+                                                    <p>Almendras</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="beneficios-item">
+                                            <p>Proteína basada en plantas</p>
+                                            <div class="beneficios-items">
+                                                <div class="beneficios-item-img">
+                                                    <img src="benefits-lamb-farro.png" alt="">
+                                                    <p>Farro</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>`
+    })
+})
+
+// verMas.forEach(button => {
+//     button.addEventListener('click', (evt) => {
+//         ventanaModal.classList.add(active)
+//         document.body.style.overflow = "hidden"
+
+//         itemIndex = carruselPrincipal.indexOf(evt.target)
+//         console.log(itemIndex)
+
+
+//         let selected = evt.target.id
+//         console.log(selected)
+
+        
+//     })
+
+// })
+
+//modalItems.insertAdjacentElement('afterbegin', sliderSectionLast)
+
+closeButton.addEventListener('click', () => {
+    navegation.style.display = "flex"
+    ventanaModal.classList.remove(active)
+    document.body.style.overflow = "visible"
+})
+
+function siguiente() {
+    itemIndex--
+    modalItems.innerHTML = `<div class="modal-item" id="modal-item">
+                            <div class="modal-imagen">
+                                <img id="modal-lamb" src="${productos.at(itemIndex).src}" alt="">
+                            </div>
+                            <div class="modal-espacio"></div>
+                            <div class="modal-texto">
+                                <p class="modal-title">${productos.at(itemIndex).title}</p>
+                                <p class="modal-description">${productos.at(itemIndex).description}</p>
+                                <div class="modal-texto_beneficios">
+                                    <h4>BENEFICIOS</h4>
+                                    <div class="modal-texto_beneficios-container">
+                                        <div class="beneficios-item">
+                                            <p>Probióticos</p>
+                                            <div class="beneficios-items">
+                                                <div class="beneficios-item-img">
+                                                    <img id="cuchara" src="benefits-yogurt.png" alt="">
+                                                    <p>Yogurt</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="beneficios-item">
+                                            <p>Antioxidantes</p>
+                                            <div class="beneficios-items">
+                                                <div class="beneficios-item-img">
+                                                    <img src="benefits-parsley.png" alt="">
+                                                    <p>Parsley</p>
+                                                </div>
+                                                <div class="beneficios-item-img">
+                                                    <img src="benefits-almonds.png" alt="">
+                                                    <p>Almendras</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="beneficios-item">
+                                            <p>Proteína basada en plantas</p>
+                                            <div class="beneficios-items">
+                                                <div class="beneficios-item-img">
+                                                    <img src="benefits-lamb-farro.png" alt="">
+                                                    <p>Farro</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>`
+}
+
+function anterior() {
+    itemIndex++
+    modalItems.innerHTML = `<div class="modal-item" id="modal-item">
+                            <div class="modal-imagen">
+                                <img id="modal-lamb" src="${productos.at(itemIndex).src}" alt="">
+                            </div>
+                            <div class="modal-espacio"></div>
+                            <div class="modal-texto">
+                                <p class="modal-title">${productos.at(itemIndex).title}</p>
+                                <p class="modal-description">${productos.at(itemIndex).description}</p>
+                                <div class="modal-texto_beneficios">
+                                    <h4>BENEFICIOS</h4>
+                                    <div class="modal-texto_beneficios-container">
+                                        <div class="beneficios-item">
+                                            <p>Probióticos</p>
+                                            <div class="beneficios-items">
+                                                <div class="beneficios-item-img">
+                                                    <img id="cuchara" src="benefits-yogurt.png" alt="">
+                                                    <p>Yogurt</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="beneficios-item">
+                                            <p>Antioxidantes</p>
+                                            <div class="beneficios-items">
+                                                <div class="beneficios-item-img">
+                                                    <img src="benefits-parsley.png" alt="">
+                                                    <p>Parsley</p>
+                                                </div>
+                                                <div class="beneficios-item-img">
+                                                    <img src="benefits-almonds.png" alt="">
+                                                    <p>Almendras</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="beneficios-item">
+                                            <p>Proteína basada en plantas</p>
+                                            <div class="beneficios-items">
+                                                <div class="beneficios-item-img">
+                                                    <img src="benefits-lamb-farro.png" alt="">
+                                                    <p>Farro</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>`
+    
+}
+
+next.addEventListener('click', siguiente)
+prev.addEventListener('click', anterior)
+
+closeButton.addEventListener('mouseenter', function() {
+    closeButton.classList.add("rotateenter")
+    closeButton.classList.remove("rotateleave")
+})
+
+closeButton.addEventListener('mouseleave', function() {
+    closeButton.classList.add("rotateleave")
+    closeButton.classList.remove("rotateenter")
+})
+
+next.addEventListener('mouseenter', function() {
+    next.style.transform = "translateX(10px) 1s"
+})
