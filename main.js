@@ -306,7 +306,7 @@ let productos = [
         id: 3,
         src: "modal3.jpg",
         title: "Waffle de harina de grillo con frutilla y kombucha.",
-        description: "This granola is savory and spicy, chewy with jackfruit and crunchy with pumpkin seeds and walnuts. Put over Icelandic skyr, it’s full of healthy protein, and when topped with turmeric and arugula, takes on clean, refreshing flavors.",
+        description: "A high-protein waffle made with super-sustainable cricket flour, topped with sweet and sour strawberry kombucha compote, then finished with a sweet, grassy sprinkle of moringa powder.",
         benefits: {
             "Anti-inflamatorio": "Turmeric",
             "Antioxidantes":  "Coriander",
@@ -365,7 +365,7 @@ let productos = [
         id: 3,
         src: "modal3.jpg",
         title: "Waffle de harina de grillo con frutilla y kombucha.",
-        description: "This granola is savory and spicy, chewy with jackfruit and crunchy with pumpkin seeds and walnuts. Put over Icelandic skyr, it’s full of healthy protein, and when topped with turmeric and arugula, takes on clean, refreshing flavors.",
+        description: "A high-protein waffle made with super-sustainable cricket flour, topped with sweet and sour strawberry kombucha compote, then finished with a sweet, grassy sprinkle of moringa powder.",
         benefits: {
             "Anti-inflamatorio": "Turmeric",
             "Antioxidantes":  "Coriander",
@@ -421,6 +421,7 @@ arrayDeItems.forEach(boton => {
         itemIndex = carruselPrincipal.indexOf(event.currentTarget)
         console.log(itemIndex)
         
+        modalItems.classList.add("activar")
 
         modalItems.innerHTML = `<div class="modal-item" id="modal-item">
                             <div class="modal-imagen">
@@ -494,6 +495,7 @@ closeButton.addEventListener('click', () => {
     navegation.style.display = "flex"
     ventanaModal.classList.remove(active)
     document.body.style.overflow = "visible"
+
 })
 
 function siguiente() {
@@ -611,5 +613,11 @@ closeButton.addEventListener('mouseleave', function() {
 })
 
 next.addEventListener('mouseenter', function() {
-    next.style.transform = "translateX(10px) 1s"
+    next.classList.add("arrowmove")
+    next.classList.remove("arrowmoveback")
+})
+
+next.addEventListener('mouseleave', function() {
+    next.classList.remove("arrowmove")
+    next.classList.add("arrowmoveback")
 })
