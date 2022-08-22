@@ -470,24 +470,6 @@ arrayDeItems.forEach(boton => {
     })
 })
 
-// verMas.forEach(button => {
-//     button.addEventListener('click', (evt) => {
-//         ventanaModal.classList.add(active)
-//         document.body.style.overflow = "hidden"
-
-//         itemIndex = carruselPrincipal.indexOf(evt.target)
-//         console.log(itemIndex)
-
-
-//         let selected = evt.target.id
-//         console.log(selected)
-
-        
-//     })
-
-// })
-
-//modalItems.insertAdjacentElement('afterbegin', sliderSectionLast)
 
 closeButton.addEventListener('click', () => {
     navegation.style.display = "flex"
