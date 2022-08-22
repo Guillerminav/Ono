@@ -419,9 +419,7 @@ arrayDeItems.forEach(boton => {
         document.body.style.overflow = "hidden"
 
         itemIndex = carruselPrincipal.indexOf(event.currentTarget)
-        console.log(itemIndex)
-        
-        modalItems.classList.add("activar")
+
 
         modalItems.innerHTML = `<div class="modal-item" id="modal-item">
                             <div class="modal-imagen">

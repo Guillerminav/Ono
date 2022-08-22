@@ -1705,7 +1705,7 @@ footer {
             height: 100vh;
             margin: 0;
             overflow: hidden;
-            opacity: 0;
+            opacity: 1;
             transition: 1s;
         }
     
